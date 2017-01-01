@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pvf-95-egH">
+                                <rect key="frame" x="560" y="86" width="800" height="800"/>
+                                <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="800" id="f1M-Po-DRg"/>
+                                    <constraint firstAttribute="width" secondItem="Pvf-95-egH" secondAttribute="height" id="qgc-5C-vuz"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="400"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzH-JN-PqC" customClass="NormalClockView">
+                                <rect key="frame" x="575" y="101" width="770" height="770"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="770" id="J5A-2x-o2w"/>
+                                    <constraint firstAttribute="width" secondItem="fzH-JN-PqC" secondAttribute="height" id="vHH-rY-vET"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Jan 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnx-dl-dif">
+                                <rect key="frame" x="794" y="906" width="332" height="84"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pvf-95-egH" firstAttribute="centerX" secondItem="fzH-JN-PqC" secondAttribute="centerX" id="1R1-tS-sCG"/>
+                            <constraint firstItem="fzH-JN-PqC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1c4-ic-zxY"/>
+                            <constraint firstItem="Pvf-95-egH" firstAttribute="centerY" secondItem="fzH-JN-PqC" secondAttribute="centerY" id="4dk-am-J4b"/>
+                            <constraint firstItem="fzH-JN-PqC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.9" id="L6J-Ac-mZh"/>
+                            <constraint firstItem="tnx-dl-dif" firstAttribute="top" secondItem="Pvf-95-egH" secondAttribute="bottom" constant="20" id="iSg-tz-9ij"/>
+                            <constraint firstItem="tnx-dl-dif" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="krV-9G-Jw2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clockLabel" destination="tnx-dl-dif" id="rVg-cB-LJP"/>
+                        <outlet property="clockView" destination="fzH-JN-PqC" id="E4X-Kt-9Hk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
