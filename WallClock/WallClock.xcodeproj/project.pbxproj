@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		DE4A7CAF1E19A3DF00CB8D31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4A7CAE1E19A3DF00CB8D31 /* main.m */; };
 		DE4A7CB21E19A3DF00CB8D31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4A7CB11E19A3DF00CB8D31 /* AppDelegate.m */; };
-		DE4A7CB51E19A3DF00CB8D31 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4A7CB41E19A3DF00CB8D31 /* ViewController.m */; };
+		DE4A7CB51E19A3DF00CB8D31 /* ClocksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4A7CB41E19A3DF00CB8D31 /* ClocksViewController.m */; };
 		DE4A7CB81E19A3DF00CB8D31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4A7CB61E19A3DF00CB8D31 /* Main.storyboard */; };
 		DE4A7CBA1E19A3DF00CB8D31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE4A7CB91E19A3DF00CB8D31 /* Assets.xcassets */; };
 		DE4A7CC31E19AE4F00CB8D31 /* ClockKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4A7CC21E19AE4F00CB8D31 /* ClockKit.m */; };
 		DE4A7CC61E19AE7000CB8D31 /* NormalClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4A7CC51E19AE7000CB8D31 /* NormalClockView.m */; };
+		DE4A7CC91E1A5EAA00CB8D31 /* LEDClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4A7CC81E1A5EAA00CB8D31 /* LEDClockView.m */; };
+		DE4A7CCC1E1A672B00CB8D31 /* LEDDigitView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4A7CCB1E1A672B00CB8D31 /* LEDDigitView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +23,8 @@
 		DE4A7CAE1E19A3DF00CB8D31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DE4A7CB01E19A3DF00CB8D31 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DE4A7CB11E19A3DF00CB8D31 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DE4A7CB31E19A3DF00CB8D31 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DE4A7CB41E19A3DF00CB8D31 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DE4A7CB31E19A3DF00CB8D31 /* ClocksViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClocksViewController.h; sourceTree = "<group>"; };
+		DE4A7CB41E19A3DF00CB8D31 /* ClocksViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClocksViewController.m; sourceTree = "<group>"; };
 		DE4A7CB71E19A3DF00CB8D31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE4A7CB91E19A3DF00CB8D31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE4A7CBB1E19A3DF00CB8D31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -30,6 +32,10 @@
 		DE4A7CC21E19AE4F00CB8D31 /* ClockKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockKit.m; sourceTree = "<group>"; };
 		DE4A7CC41E19AE6F00CB8D31 /* NormalClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalClockView.h; sourceTree = "<group>"; };
 		DE4A7CC51E19AE7000CB8D31 /* NormalClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalClockView.m; sourceTree = "<group>"; };
+		DE4A7CC71E1A5EAA00CB8D31 /* LEDClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEDClockView.h; sourceTree = "<group>"; };
+		DE4A7CC81E1A5EAA00CB8D31 /* LEDClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEDClockView.m; sourceTree = "<group>"; };
+		DE4A7CCA1E1A672B00CB8D31 /* LEDDigitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEDDigitView.h; sourceTree = "<group>"; };
+		DE4A7CCB1E1A672B00CB8D31 /* LEDDigitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEDDigitView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +70,12 @@
 			children = (
 				DE4A7CB01E19A3DF00CB8D31 /* AppDelegate.h */,
 				DE4A7CB11E19A3DF00CB8D31 /* AppDelegate.m */,
-				DE4A7CB31E19A3DF00CB8D31 /* ViewController.h */,
-				DE4A7CB41E19A3DF00CB8D31 /* ViewController.m */,
+				DE4A7CB31E19A3DF00CB8D31 /* ClocksViewController.h */,
+				DE4A7CB41E19A3DF00CB8D31 /* ClocksViewController.m */,
+				DE4A7CC71E1A5EAA00CB8D31 /* LEDClockView.h */,
+				DE4A7CC81E1A5EAA00CB8D31 /* LEDClockView.m */,
+				DE4A7CCA1E1A672B00CB8D31 /* LEDDigitView.h */,
+				DE4A7CCB1E1A672B00CB8D31 /* LEDDigitView.m */,
 				DE4A7CC41E19AE6F00CB8D31 /* NormalClockView.h */,
 				DE4A7CC51E19AE7000CB8D31 /* NormalClockView.m */,
 				DE4A7CC11E19AE4F00CB8D31 /* ClockKit.h */,
@@ -157,11 +167,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE4A7CB51E19A3DF00CB8D31 /* ViewController.m in Sources */,
+				DE4A7CB51E19A3DF00CB8D31 /* ClocksViewController.m in Sources */,
 				DE4A7CC31E19AE4F00CB8D31 /* ClockKit.m in Sources */,
 				DE4A7CB21E19A3DF00CB8D31 /* AppDelegate.m in Sources */,
 				DE4A7CAF1E19A3DF00CB8D31 /* main.m in Sources */,
+				DE4A7CCC1E1A672B00CB8D31 /* LEDDigitView.m in Sources */,
 				DE4A7CC61E19AE7000CB8D31 /* NormalClockView.m in Sources */,
+				DE4A7CC91E1A5EAA00CB8D31 /* LEDClockView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +324,7 @@
 				DE4A7CC01E19A3DF00CB8D31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

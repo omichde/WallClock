@@ -170,6 +170,215 @@
 
 }
 
++ (void)drawLEDClockWithLed0: (BOOL)led0 led1: (BOOL)led1 led2: (BOOL)led2 led3: (BOOL)led3 led4: (BOOL)led4 led5: (BOOL)led5 led6: (BOOL)led6
+{
+    [ClockKit drawLEDClockWithFrame: CGRectMake(0, 0, 100, 180) resizing: ClockKitResizingBehaviorStretch led0: led0 led1: led1 led2: led2 led3: led3 led4: led4 led5: led5 led6: led6];
+}
+
++ (void)drawLEDClockWithFrame: (CGRect)targetFrame resizing: (ClockKitResizingBehavior)resizing led0: (BOOL)led0 led1: (BOOL)led1 led2: (BOOL)led2 led3: (BOOL)led3 led4: (BOOL)led4 led5: (BOOL)led5 led6: (BOOL)led6
+{
+    //// General Declarations
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    //// Resize to Target Frame
+    CGContextSaveGState(context);
+    CGRect resizedFrame = ClockKitResizingBehaviorApply(resizing, CGRectMake(0, 0, 100, 180), targetFrame);
+    CGContextTranslateCTM(context, resizedFrame.origin.x, resizedFrame.origin.y);
+    CGContextScaleCTM(context, resizedFrame.size.width / 100, resizedFrame.size.height / 180);
+
+
+    //// Color Declarations
+    UIColor* barColor = [UIColor colorWithRed: 0 green: 0 blue: 0 alpha: 1];
+
+    if (led3)
+    {
+        //// Bezier Drawing
+        UIBezierPath* bezierPath = [UIBezierPath bezierPath];
+        [bezierPath moveToPoint: CGPointMake(10, 90)];
+        [bezierPath addLineToPoint: CGPointMake(19.5, 80)];
+        [bezierPath addLineToPoint: CGPointMake(80, 80)];
+        [bezierPath addLineToPoint: CGPointMake(90, 90)];
+        [bezierPath addLineToPoint: CGPointMake(80, 100)];
+        [bezierPath addLineToPoint: CGPointMake(20, 100)];
+        [bezierPath addLineToPoint: CGPointMake(10, 90)];
+        [bezierPath closePath];
+        [barColor setFill];
+        [bezierPath fill];
+        [UIColor.whiteColor setStroke];
+        bezierPath.lineWidth = 1;
+        [bezierPath stroke];
+    }
+
+
+    if (led1)
+    {
+        //// Bezier 9 Drawing
+        UIBezierPath* bezier9Path = [UIBezierPath bezierPath];
+        [bezier9Path moveToPoint: CGPointMake(2.93, 2.93)];
+        [bezier9Path addCurveToPoint: CGPointMake(20, 20) controlPoint1: CGPointMake(8.48, 8.48) controlPoint2: CGPointMake(20, 20)];
+        [bezier9Path addLineToPoint: CGPointMake(20, 80)];
+        [bezier9Path addLineToPoint: CGPointMake(10, 90)];
+        [bezier9Path addLineToPoint: CGPointMake(0, 80.5)];
+        [bezier9Path addCurveToPoint: CGPointMake(0, 10) controlPoint1: CGPointMake(0, 80.5) controlPoint2: CGPointMake(0, 31.56)];
+        [bezier9Path addCurveToPoint: CGPointMake(2.93, 2.93) controlPoint1: CGPointMake(0, 7.24) controlPoint2: CGPointMake(1.12, 4.74)];
+        [bezier9Path closePath];
+        [barColor setFill];
+        [bezier9Path fill];
+        [UIColor.whiteColor setStroke];
+        bezier9Path.lineWidth = 1;
+        [bezier9Path stroke];
+    }
+
+
+    if (led0)
+    {
+        //// Bezier 8 Drawing
+        UIBezierPath* bezier8Path = [UIBezierPath bezierPath];
+        [bezier8Path moveToPoint: CGPointMake(97.07, 2.93)];
+        [bezier8Path addCurveToPoint: CGPointMake(80, 20) controlPoint1: CGPointMake(91.52, 8.48) controlPoint2: CGPointMake(80, 20)];
+        [bezier8Path addLineToPoint: CGPointMake(20, 20)];
+        [bezier8Path addCurveToPoint: CGPointMake(2.93, 2.93) controlPoint1: CGPointMake(20, 20) controlPoint2: CGPointMake(8.48, 8.48)];
+        [bezier8Path addCurveToPoint: CGPointMake(9.75, 0) controlPoint1: CGPointMake(4.68, 1.17) controlPoint2: CGPointMake(7.09, 0.07)];
+        [bezier8Path addLineToPoint: CGPointMake(10, 0)];
+        [bezier8Path addLineToPoint: CGPointMake(90, 0)];
+        [bezier8Path addCurveToPoint: CGPointMake(97.07, 2.93) controlPoint1: CGPointMake(92.76, -0) controlPoint2: CGPointMake(95.26, 1.12)];
+        [bezier8Path closePath];
+        [barColor setFill];
+        [bezier8Path fill];
+        [UIColor.whiteColor setStroke];
+        bezier8Path.lineWidth = 1;
+        [bezier8Path stroke];
+    }
+
+
+    if (led2)
+    {
+        //// Bezier 2 Drawing
+        UIBezierPath* bezier2Path = [UIBezierPath bezierPath];
+        [bezier2Path moveToPoint: CGPointMake(97.07, 2.93)];
+        [bezier2Path addCurveToPoint: CGPointMake(80, 20) controlPoint1: CGPointMake(91.52, 8.48) controlPoint2: CGPointMake(80, 20)];
+        [bezier2Path addLineToPoint: CGPointMake(80, 80)];
+        [bezier2Path addLineToPoint: CGPointMake(90, 90)];
+        [bezier2Path addLineToPoint: CGPointMake(100, 80.5)];
+        [bezier2Path addCurveToPoint: CGPointMake(100, 10) controlPoint1: CGPointMake(100, 80.5) controlPoint2: CGPointMake(100, 31.56)];
+        [bezier2Path addCurveToPoint: CGPointMake(97.07, 2.93) controlPoint1: CGPointMake(100, 7.24) controlPoint2: CGPointMake(98.88, 4.74)];
+        [bezier2Path closePath];
+        [barColor setFill];
+        [bezier2Path fill];
+        [UIColor.whiteColor setStroke];
+        bezier2Path.lineWidth = 1;
+        [bezier2Path stroke];
+    }
+
+
+    if (led4)
+    {
+        //// Bezier 3 Drawing
+        UIBezierPath* bezier3Path = [UIBezierPath bezierPath];
+        [bezier3Path moveToPoint: CGPointMake(2.93, 177.07)];
+        [bezier3Path addCurveToPoint: CGPointMake(20, 160) controlPoint1: CGPointMake(8.48, 171.52) controlPoint2: CGPointMake(20, 160)];
+        [bezier3Path addLineToPoint: CGPointMake(20, 100)];
+        [bezier3Path addLineToPoint: CGPointMake(10, 90)];
+        [bezier3Path addLineToPoint: CGPointMake(0, 99.5)];
+        [bezier3Path addCurveToPoint: CGPointMake(0, 170) controlPoint1: CGPointMake(0, 99.5) controlPoint2: CGPointMake(0, 148.44)];
+        [bezier3Path addCurveToPoint: CGPointMake(2.93, 177.07) controlPoint1: CGPointMake(0, 172.76) controlPoint2: CGPointMake(1.12, 175.26)];
+        [bezier3Path closePath];
+        [barColor setFill];
+        [bezier3Path fill];
+        [UIColor.whiteColor setStroke];
+        bezier3Path.lineWidth = 1;
+        [bezier3Path stroke];
+    }
+
+
+    if (led6)
+    {
+        //// Bezier 4 Drawing
+        UIBezierPath* bezier4Path = [UIBezierPath bezierPath];
+        [bezier4Path moveToPoint: CGPointMake(97.07, 177.07)];
+        [bezier4Path addCurveToPoint: CGPointMake(80, 160) controlPoint1: CGPointMake(91.52, 171.52) controlPoint2: CGPointMake(80, 160)];
+        [bezier4Path addLineToPoint: CGPointMake(20, 160)];
+        [bezier4Path addCurveToPoint: CGPointMake(2.93, 177.07) controlPoint1: CGPointMake(20, 160) controlPoint2: CGPointMake(8.48, 171.52)];
+        [bezier4Path addCurveToPoint: CGPointMake(9.75, 180) controlPoint1: CGPointMake(4.68, 178.83) controlPoint2: CGPointMake(7.09, 179.93)];
+        [bezier4Path addLineToPoint: CGPointMake(10, 180)];
+        [bezier4Path addLineToPoint: CGPointMake(90, 180)];
+        [bezier4Path addCurveToPoint: CGPointMake(97.07, 177.07) controlPoint1: CGPointMake(92.76, 180) controlPoint2: CGPointMake(95.26, 178.88)];
+        [bezier4Path closePath];
+        [barColor setFill];
+        [bezier4Path fill];
+        [UIColor.whiteColor setStroke];
+        bezier4Path.lineWidth = 1;
+        [bezier4Path stroke];
+    }
+
+
+    if (led5)
+    {
+        //// Bezier 5 Drawing
+        UIBezierPath* bezier5Path = [UIBezierPath bezierPath];
+        [bezier5Path moveToPoint: CGPointMake(97.07, 177.07)];
+        [bezier5Path addCurveToPoint: CGPointMake(80, 160) controlPoint1: CGPointMake(91.52, 171.52) controlPoint2: CGPointMake(80, 160)];
+        [bezier5Path addLineToPoint: CGPointMake(80, 100)];
+        [bezier5Path addLineToPoint: CGPointMake(90, 90)];
+        [bezier5Path addLineToPoint: CGPointMake(100, 99.5)];
+        [bezier5Path addCurveToPoint: CGPointMake(100, 170) controlPoint1: CGPointMake(100, 99.5) controlPoint2: CGPointMake(100, 148.44)];
+        [bezier5Path addCurveToPoint: CGPointMake(97.07, 177.07) controlPoint1: CGPointMake(100, 172.76) controlPoint2: CGPointMake(98.88, 175.26)];
+        [bezier5Path closePath];
+        [barColor setFill];
+        [bezier5Path fill];
+        [UIColor.whiteColor setStroke];
+        bezier5Path.lineWidth = 1;
+        [bezier5Path stroke];
+    }
+    
+    CGContextRestoreGState(context);
+
+}
+
++ (void)drawLEDDotWithSecondValue: (CGFloat)secondValue
+{
+    [ClockKit drawLEDDotWithFrame: CGRectMake(0, 0, 100, 180) resizing: ClockKitResizingBehaviorStretch secondValue: secondValue];
+}
+
++ (void)drawLEDDotWithFrame: (CGRect)targetFrame resizing: (ClockKitResizingBehavior)resizing secondValue: (CGFloat)secondValue
+{
+    //// General Declarations
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    //// Resize to Target Frame
+    CGContextSaveGState(context);
+    CGRect resizedFrame = ClockKitResizingBehaviorApply(resizing, CGRectMake(0, 0, 100, 180), targetFrame);
+    CGContextTranslateCTM(context, resizedFrame.origin.x, resizedFrame.origin.y);
+    CGContextScaleCTM(context, resizedFrame.size.width / 100, resizedFrame.size.height / 180);
+
+
+    //// Color Declarations
+    UIColor* dotColor = [UIColor colorWithRed: 0 green: 0 blue: 0 alpha: 1];
+
+    //// Variable Declarations
+    UIColor* isEvenSecond = fmod(secondValue, 2) == 0 ? dotColor : [UIColor colorWithRed: 0 green: 0 blue: 0 alpha: 0];
+
+    //// Rectangle Drawing
+    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(40.5, 109.5, 20, 20)];
+    [isEvenSecond setFill];
+    [rectanglePath fill];
+    [UIColor.whiteColor setStroke];
+    rectanglePath.lineWidth = 1;
+    [rectanglePath stroke];
+
+
+    //// Rectangle 2 Drawing
+    UIBezierPath* rectangle2Path = [UIBezierPath bezierPathWithRect: CGRectMake(40.5, 49.5, 20, 20)];
+    [isEvenSecond setFill];
+    [rectangle2Path fill];
+    [UIColor.whiteColor setStroke];
+    rectangle2Path.lineWidth = 1;
+    [rectangle2Path stroke];
+    
+    CGContextRestoreGState(context);
+
+}
+
 @end
 
 
