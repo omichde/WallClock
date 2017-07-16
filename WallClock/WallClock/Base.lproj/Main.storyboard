@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XDp-iP-JUf">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XDp-iP-JUf">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,8 +31,35 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Edg-93-p42">
                                                 <rect key="frame" x="560" y="0.0" width="800" height="800"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7v-S9-LKn" customClass="ClockSliceView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="800" height="800"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="800" id="XJ7-rR-OBv"/>
+                                                            <constraint firstAttribute="width" secondItem="F7v-S9-LKn" secondAttribute="height" id="tUB-Kg-4L1"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="400"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25u-1T-2jU" customClass="NormalClockView">
+                                                        <rect key="frame" x="15" y="15" width="770" height="770"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="25u-1T-2jU" secondAttribute="height" id="7K9-8M-0aB"/>
+                                                            <constraint firstAttribute="width" constant="770" id="ahf-WB-JYk"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstItem="25u-1T-2jU" firstAttribute="centerX" secondItem="Edg-93-p42" secondAttribute="centerX" id="2kc-SJ-Gdj"/>
+                                                    <constraint firstItem="F7v-S9-LKn" firstAttribute="centerX" secondItem="Edg-93-p42" secondAttribute="centerX" id="Bmo-pd-Prz"/>
+                                                    <constraint firstItem="F7v-S9-LKn" firstAttribute="centerY" secondItem="Edg-93-p42" secondAttribute="centerY" id="HDI-sa-x9n"/>
+                                                    <constraint firstItem="25u-1T-2jU" firstAttribute="centerY" secondItem="Edg-93-p42" secondAttribute="centerY" id="Hve-Wl-03w"/>
                                                     <constraint firstAttribute="width" secondItem="Edg-93-p42" secondAttribute="height" id="YdN-TV-dnd"/>
                                                     <constraint firstAttribute="width" constant="800" id="k4G-xv-mWE"/>
                                                 </constraints>
@@ -41,14 +68,6 @@
                                                         <integer key="value" value="400"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25u-1T-2jU" customClass="NormalClockView">
-                                                <rect key="frame" x="575" y="15" width="770" height="770"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="25u-1T-2jU" secondAttribute="height" id="7K9-8M-0aB"/>
-                                                    <constraint firstAttribute="width" constant="770" id="ahf-WB-JYk"/>
-                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uKV-xJ-L9X" customClass="LEDClockView">
                                                 <rect key="frame" x="2380" y="250" width="1000" height="300"/>
@@ -114,9 +133,7 @@
                                             <constraint firstItem="Edg-93-p42" firstAttribute="centerY" secondItem="tYO-e0-J3B" secondAttribute="centerY" id="K4S-IG-yvn"/>
                                             <constraint firstItem="uKV-xJ-L9X" firstAttribute="centerX" secondItem="tYO-e0-J3B" secondAttribute="centerX" multiplier="1.5" id="QtE-sK-uTL"/>
                                             <constraint firstItem="uKV-xJ-L9X" firstAttribute="centerY" secondItem="tYO-e0-J3B" secondAttribute="centerY" id="W0g-D7-Qmt"/>
-                                            <constraint firstItem="25u-1T-2jU" firstAttribute="centerY" secondItem="Edg-93-p42" secondAttribute="centerY" id="e4N-lx-GGc"/>
                                             <constraint firstAttribute="height" constant="800" id="lh5-Z1-8we"/>
-                                            <constraint firstItem="25u-1T-2jU" firstAttribute="centerX" secondItem="Edg-93-p42" secondAttribute="centerX" id="nrx-CK-gh2"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -149,6 +166,7 @@
                     </view>
                     <connections>
                         <outlet property="clockLabel" destination="QFE-IH-ErZ" id="e24-sG-fiV"/>
+                        <outlet property="clockSliceView" destination="F7v-S9-LKn" id="Hry-xR-tTr"/>
                         <outlet property="ledClockView" destination="uKV-xJ-L9X" id="1ZK-wJ-aUO"/>
                         <outlet property="normalClockView" destination="25u-1T-2jU" id="ugB-U7-9t4"/>
                         <outlet property="scrollView" destination="bcd-ya-Wns" id="J5a-Ci-qfB"/>

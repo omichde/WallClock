@@ -8,11 +8,13 @@
 
 #import "ClocksViewController.h"
 #import "NormalClockView.h"
+#import "ClockSliceView.h"
 #import "LEDClockView.h"
 
 @interface ClocksViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet NormalClockView *normalClockView;
+@property (weak, nonatomic) IBOutlet ClockSliceView *clockSliceView;
 @property (weak, nonatomic) IBOutlet LEDClockView *ledClockView;
 @property (weak, nonatomic) IBOutlet UILabel *clockLabel;
 @property (nonatomic) NSDateFormatter *formatter;
@@ -25,6 +27,10 @@
 
 	self.scrollView.panGestureRecognizer.allowedTouchTypes = @[@(UITouchTypeIndirect)];
 
+	UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self.clockSliceView action:@selector(togglePlayPause:)];
+	tapGestureRecognizer.allowedPressTypes = @[@(UIPressTypePlayPause)];
+	[self.view addGestureRecognizer:tapGestureRecognizer];
+
 	self.formatter = [[NSDateFormatter alloc] init];
 	self.formatter.dateStyle = NSDateFormatterLongStyle;
 	self.formatter.timeStyle = NSDateFormatterNoStyle;
@@ -32,11 +38,12 @@
 	NSDate *now = [NSDate date];
 	self.clockLabel.text = [self.formatter stringFromDate:now];
 	self.normalClockView.date = self.ledClockView.date = now;
+	self.clockSliceView.startDate = self.clockSliceView.endDate = nil;
 
 	[NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer *timer) {
 		NSDate *now = [NSDate date];
 		self.clockLabel.text = [self.formatter stringFromDate:now];
-		self.normalClockView.date = self.ledClockView.date = now;
+		self.normalClockView.date = self.ledClockView.date = self.clockSliceView.date = now;
 	}];
 
 	[[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillResignActiveNotification object:nil queue:nil usingBlock:^(NSNotification *note) {

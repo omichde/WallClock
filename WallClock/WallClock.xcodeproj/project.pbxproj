@@ -16,6 +16,7 @@
 		DE4A7CC61E19AE7000CB8D31 /* NormalClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4A7CC51E19AE7000CB8D31 /* NormalClockView.m */; };
 		DE4A7CC91E1A5EAA00CB8D31 /* LEDClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4A7CC81E1A5EAA00CB8D31 /* LEDClockView.m */; };
 		DE4A7CCC1E1A672B00CB8D31 /* LEDDigitView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4A7CCB1E1A672B00CB8D31 /* LEDDigitView.m */; };
+		DEDE172A1F1B7E65001FECFC /* ClockSliceView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDE17291F1B7E65001FECFC /* ClockSliceView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		DE4A7CC81E1A5EAA00CB8D31 /* LEDClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEDClockView.m; sourceTree = "<group>"; };
 		DE4A7CCA1E1A672B00CB8D31 /* LEDDigitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEDDigitView.h; sourceTree = "<group>"; };
 		DE4A7CCB1E1A672B00CB8D31 /* LEDDigitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEDDigitView.m; sourceTree = "<group>"; };
+		DEDE17281F1B7E65001FECFC /* ClockSliceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockSliceView.h; sourceTree = "<group>"; };
+		DEDE17291F1B7E65001FECFC /* ClockSliceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockSliceView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 				DE4A7CCB1E1A672B00CB8D31 /* LEDDigitView.m */,
 				DE4A7CC41E19AE6F00CB8D31 /* NormalClockView.h */,
 				DE4A7CC51E19AE7000CB8D31 /* NormalClockView.m */,
+				DEDE17281F1B7E65001FECFC /* ClockSliceView.h */,
+				DEDE17291F1B7E65001FECFC /* ClockSliceView.m */,
 				DE4A7CC11E19AE4F00CB8D31 /* ClockKit.h */,
 				DE4A7CC21E19AE4F00CB8D31 /* ClockKit.m */,
 				DE4A7CB61E19A3DF00CB8D31 /* Main.storyboard */,
@@ -169,6 +174,7 @@
 			files = (
 				DE4A7CB51E19A3DF00CB8D31 /* ClocksViewController.m in Sources */,
 				DE4A7CC31E19AE4F00CB8D31 /* ClockKit.m in Sources */,
+				DEDE172A1F1B7E65001FECFC /* ClockSliceView.m in Sources */,
 				DE4A7CB21E19A3DF00CB8D31 /* AppDelegate.m in Sources */,
 				DE4A7CAF1E19A3DF00CB8D31 /* main.m in Sources */,
 				DE4A7CCC1E1A672B00CB8D31 /* LEDDigitView.m in Sources */,
