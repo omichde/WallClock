@@ -6,6 +6,8 @@ If you press the play/pause button, a 15 minute timer will start/end.
 The timer is indicated by a colored slice in the background of the analog clock.
 While the time passes, the color of the slice will change from green to red.
 
+The analog and the LED clock are driven by PaintCode and its parametric drawing methods.
+
 # Installation
 
 Download the git repo then install/run via Xcode.
