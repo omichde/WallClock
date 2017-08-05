@@ -14,7 +14,7 @@
         <!--Clocks View Controller-->
         <scene sceneID="829-T3-YOM">
             <objects>
-                <viewController storyboardIdentifier="00" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XDp-iP-JUf" customClass="ClocksViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="00" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XDp-iP-JUf" customClass="ClocksViewController" customModule="WallClockSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VeV-OP-LsE"/>
                         <viewControllerLayoutGuide type="bottom" id="8xf-Ba-0lB"/>
@@ -32,7 +32,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Edg-93-p42">
                                                 <rect key="frame" x="560" y="0.0" width="800" height="800"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7v-S9-LKn" customClass="ClockSliceView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7v-S9-LKn" customClass="ClockSliceView" customModule="WallClockSwift" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="800" height="800"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -45,7 +45,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25u-1T-2jU" customClass="NormalClockView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25u-1T-2jU" customClass="NormalClockView" customModule="WallClockSwift" customModuleProvider="target">
                                                         <rect key="frame" x="15" y="15" width="770" height="770"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -69,31 +69,31 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uKV-xJ-L9X" customClass="LEDClockView">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uKV-xJ-L9X" customClass="LEDClockView" customModule="WallClockSwift" customModuleProvider="target">
                                                 <rect key="frame" x="2380" y="250" width="1000" height="300"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMM-5W-hdi" customClass="LEDDigitView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMM-5W-hdi" customClass="LEDDigitView" customModule="WallClockSwift" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="167" height="300"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="fMM-5W-hdi" secondAttribute="height" multiplier="5:9" id="zgl-JI-Qlc"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzD-b4-6as" customClass="LEDDigitView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzD-b4-6as" customClass="LEDDigitView" customModule="WallClockSwift" customModuleProvider="target">
                                                         <rect key="frame" x="267" y="0.0" width="166" height="300"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="rzD-b4-6as" secondAttribute="height" multiplier="5:9" id="3KF-sI-vWs"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Pk-5e-VtH" customClass="LEDDigitView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Pk-5e-VtH" customClass="LEDDigitView" customModule="WallClockSwift" customModuleProvider="target">
                                                         <rect key="frame" x="567" y="0.0" width="166" height="300"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="7Pk-5e-VtH" secondAttribute="height" multiplier="5:9" id="wz3-IS-Hgp"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z31-Xw-Tde" customClass="LEDDigitView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z31-Xw-Tde" customClass="LEDDigitView" customModule="WallClockSwift" customModuleProvider="target">
                                                         <rect key="frame" x="833" y="0.0" width="167" height="300"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -119,10 +119,10 @@
                                                     <constraint firstItem="fMM-5W-hdi" firstAttribute="top" secondItem="uKV-xJ-L9X" secondAttribute="top" id="vFv-VF-Fbt"/>
                                                 </constraints>
                                                 <connections>
-                                                    <outlet property="hour0" destination="fMM-5W-hdi" id="CB1-1I-Vs9"/>
-                                                    <outlet property="hour1" destination="rzD-b4-6as" id="OOI-N4-XKO"/>
-                                                    <outlet property="minute0" destination="7Pk-5e-VtH" id="wAk-Jt-yVQ"/>
-                                                    <outlet property="minute1" destination="z31-Xw-Tde" id="tW7-Jv-DK3"/>
+                                                    <outlet property="hour0" destination="fMM-5W-hdi" id="2WB-9K-Jo4"/>
+                                                    <outlet property="hour1" destination="rzD-b4-6as" id="uOm-4M-6P4"/>
+                                                    <outlet property="minute0" destination="7Pk-5e-VtH" id="a9v-KM-wRA"/>
+                                                    <outlet property="minute1" destination="z31-Xw-Tde" id="o8H-Gv-Kc4"/>
                                                 </connections>
                                             </view>
                                         </subviews>
@@ -165,7 +165,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="clockLabel" destination="QFE-IH-ErZ" id="e24-sG-fiV"/>
+                        <outlet property="clockLabel" destination="QFE-IH-ErZ" id="J2l-Oz-eb2"/>
                         <outlet property="clockSliceView" destination="F7v-S9-LKn" id="Hry-xR-tTr"/>
                         <outlet property="ledClockView" destination="uKV-xJ-L9X" id="1ZK-wJ-aUO"/>
                         <outlet property="normalClockView" destination="25u-1T-2jU" id="ugB-U7-9t4"/>

@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE4524831F364B67005FA838 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8243491F1C78CD0006341E /* Main.storyboard */; };
+		DE8243461F1C78CD0006341E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8243451F1C78CD0006341E /* AppDelegate.swift */; };
+		DE82434D1F1C78CD0006341E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE82434C1F1C78CD0006341E /* Assets.xcassets */; };
+		DE8243551F1C7A220006341E /* ClocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8243541F1C7A220006341E /* ClocksViewController.swift */; };
+		DE8243571F1C7B530006341E /* NormalClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8243561F1C7B530006341E /* NormalClockView.swift */; };
+		DE8243591F1C805B0006341E /* LEDClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8243581F1C805B0006341E /* LEDClockView.swift */; };
+		DE82435B1F1C80700006341E /* LEDDigitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82435A1F1C80700006341E /* LEDDigitView.swift */; };
+		DE82435D1F1C808B0006341E /* ClockSliceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82435C1F1C808B0006341E /* ClockSliceView.swift */; };
+		DE82435F1F1C81250006341E /* ClockKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82435E1F1C81250006341E /* ClockKit.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DE8243421F1C78CD0006341E /* WallClockSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallClockSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE8243451F1C78CD0006341E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE82434A1F1C78CD0006341E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE82434C1F1C78CD0006341E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE82434E1F1C78CD0006341E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE8243541F1C7A220006341E /* ClocksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClocksViewController.swift; sourceTree = "<group>"; };
+		DE8243561F1C7B530006341E /* NormalClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalClockView.swift; sourceTree = "<group>"; };
+		DE8243581F1C805B0006341E /* LEDClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LEDClockView.swift; sourceTree = "<group>"; };
+		DE82435A1F1C80700006341E /* LEDDigitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LEDDigitView.swift; sourceTree = "<group>"; };
+		DE82435C1F1C808B0006341E /* ClockSliceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockSliceView.swift; sourceTree = "<group>"; };
+		DE82435E1F1C81250006341E /* ClockKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockKit.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE82433F1F1C78CD0006341E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE8243391F1C78CD0006341E = {
+			isa = PBXGroup;
+			children = (
+				DE8243441F1C78CD0006341E /* WallClockSwift */,
+				DE8243431F1C78CD0006341E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE8243431F1C78CD0006341E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE8243421F1C78CD0006341E /* WallClockSwift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE8243441F1C78CD0006341E /* WallClockSwift */ = {
+			isa = PBXGroup;
+			children = (
+				DE8243451F1C78CD0006341E /* AppDelegate.swift */,
+				DE8243541F1C7A220006341E /* ClocksViewController.swift */,
+				DE8243581F1C805B0006341E /* LEDClockView.swift */,
+				DE82435A1F1C80700006341E /* LEDDigitView.swift */,
+				DE8243561F1C7B530006341E /* NormalClockView.swift */,
+				DE82435C1F1C808B0006341E /* ClockSliceView.swift */,
+				DE8243491F1C78CD0006341E /* Main.storyboard */,
+				DE82435E1F1C81250006341E /* ClockKit.swift */,
+				DE82434C1F1C78CD0006341E /* Assets.xcassets */,
+				DE82434E1F1C78CD0006341E /* Info.plist */,
+			);
+			path = WallClockSwift;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE8243411F1C78CD0006341E /* WallClockSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE8243511F1C78CD0006341E /* Build configuration list for PBXNativeTarget "WallClockSwift" */;
+			buildPhases = (
+				DE82433E1F1C78CD0006341E /* Sources */,
+				DE82433F1F1C78CD0006341E /* Frameworks */,
+				DE8243401F1C78CD0006341E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WallClockSwift;
+			productName = WallClockSwift;
+			productReference = DE8243421F1C78CD0006341E /* WallClockSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE82433A1F1C78CD0006341E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Oliver Michalak";
+				TargetAttributes = {
+					DE8243411F1C78CD0006341E = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 6ZU459JA6J;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DE82433D1F1C78CD0006341E /* Build configuration list for PBXProject "WallClockSwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE8243391F1C78CD0006341E;
+			productRefGroup = DE8243431F1C78CD0006341E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE8243411F1C78CD0006341E /* WallClockSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE8243401F1C78CD0006341E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE82434D1F1C78CD0006341E /* Assets.xcassets in Resources */,
+				DE4524831F364B67005FA838 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE82433E1F1C78CD0006341E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE8243571F1C7B530006341E /* NormalClockView.swift in Sources */,
+				DE8243591F1C805B0006341E /* LEDClockView.swift in Sources */,
+				DE82435B1F1C80700006341E /* LEDDigitView.swift in Sources */,
+				DE8243461F1C78CD0006341E /* AppDelegate.swift in Sources */,
+				DE82435F1F1C81250006341E /* ClockKit.swift in Sources */,
+				DE82435D1F1C808B0006341E /* ClockSliceView.swift in Sources */,
+				DE8243551F1C7A220006341E /* ClocksViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DE8243491F1C78CD0006341E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE82434A1F1C78CD0006341E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE82434F1F1C78CD0006341E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		DE8243501F1C78CD0006341E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE8243521F1C78CD0006341E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 6ZU459JA6J;
+				INFOPLIST_FILE = WallClockSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.werk01.WallClockSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DE8243531F1C78CD0006341E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 6ZU459JA6J;
+				INFOPLIST_FILE = WallClockSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.werk01.WallClockSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE82433D1F1C78CD0006341E /* Build configuration list for PBXProject "WallClockSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE82434F1F1C78CD0006341E /* Debug */,
+				DE8243501F1C78CD0006341E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE8243511F1C78CD0006341E /* Build configuration list for PBXNativeTarget "WallClockSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE8243521F1C78CD0006341E /* Debug */,
+				DE8243531F1C78CD0006341E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE82433A1F1C78CD0006341E /* Project object */;
+}
