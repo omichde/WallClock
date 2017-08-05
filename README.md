@@ -1,4 +1,4 @@
-# WallClock
+# WallClock WallClockSwift
 
 This is a small tvOS clock application with a timer. It has an analog clock and an LED clock.
 
@@ -14,7 +14,11 @@ Download the git repo then install/run via Xcode.
 
 # Version
 
-**1.0**
+**1.1**
+
+- Objective-C and Swift 3 version included
+
+**1.0** Now Objective-C and Swift 3 version included
 
 - first release
 
