@@ -21,10 +21,10 @@ class ClocksViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		scrollView.panGestureRecognizer.allowedTouchTypes = [NSNumber(value:UITouchType.indirect.rawValue)]
+		scrollView.panGestureRecognizer.allowedTouchTypes = [NSNumber(value:UITouch.TouchType.indirect.rawValue)]
 		
 		let tapGestureRecognizer = UITapGestureRecognizer.init(target: self.clockSliceView, action: #selector(self.clockSliceView.togglePlayPause))
-		tapGestureRecognizer.allowedPressTypes = [NSNumber(value:UIPressType.playPause.rawValue)]
+		tapGestureRecognizer.allowedPressTypes = [NSNumber(value:UIPress.PressType.playPause.rawValue)]
 		view.addGestureRecognizer(tapGestureRecognizer)
 		
 		formatter.dateStyle = .long
@@ -45,7 +45,7 @@ class ClocksViewController: UIViewController {
 			self.clockSliceView.date = now
 		}
 		
-		NotificationCenter.default.addObserver(forName: Notification.Name.UIApplicationWillResignActive, object: nil, queue: nil) { _ in
+		NotificationCenter.default.addObserver(forName: UIApplication.willResignActiveNotification, object: nil, queue: nil) { _ in
 			let index = self.scrollView.contentOffset.x / self.view.frame.size.width
 			UserDefaults.standard.set(index, forKey: "index")
 		}

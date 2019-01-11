@@ -37,7 +37,7 @@ class ClockSliceView: UIView {
 	}
 
 	// move to VC if LED clock should get timer too, (together with idleTimerDisabled)
-	public func togglePlayPause (gesture: UITapGestureRecognizer) {
+	@objc public func togglePlayPause (gesture: UITapGestureRecognizer) {
 		if (gesture.state == .ended) {
 			if (isPlaying) {
 				startDate = nil
@@ -61,9 +61,9 @@ class ClockSliceView: UIView {
 			let endComp = Calendar.current.dateComponents([Calendar.Component.minute], from: endDate)
 
 			// seconds precision preferred for coloring
-			let diff = Float(fmax(0, fmin(1, (date.timeIntervalSinceReferenceDate - startDate.timeIntervalSinceReferenceDate) / (endDate.timeIntervalSinceReferenceDate - startDate.timeIntervalSinceReferenceDate))))
+			let diff = CGFloat(fmax(0, fmin(1, (date.timeIntervalSinceReferenceDate - startDate.timeIntervalSinceReferenceDate) / (endDate.timeIntervalSinceReferenceDate - startDate.timeIntervalSinceReferenceDate))))
 			// in RGB direct green->red creates ugly brown in the middle, just add blue in between
-			let sliceColor = UIColor.init(colorLiteralRed: diff, green: 1-diff, blue: (2*diff >= 1 ? 2 - 2*diff : 2*diff), alpha: 1)
+			let sliceColor = UIColor(red: diff, green: 1-diff, blue: (2*diff >= 1 ? 2 - 2*diff : 2*diff), alpha: 1)
 			ClockKit.drawClockSlice(frame: frame, resizing: .aspectFit, sliceColor: sliceColor, sliceStartValue: CGFloat(dateComp.minute!), sliceEndValue: CGFloat(endComp.minute!))
 		}
 		else {
